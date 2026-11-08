@@ -3,7 +3,7 @@
 一个**不依赖 root** 的 Android 小工具，用来处理运营商预装在定制 ROM 里的 “SystemHelper” 类隐私采集应用（典型包名 `com.mobiletools.systemhelper`）。
 
 > 不需要 root，不需要解锁 BL，不需要改系统分区。
-> 在 Xiaomi 17 / HyperOS 4.0.6 / Android 17 上实测可用；其它品牌理论上通用（vivo / OPPO / 一加 / 真我 / 中兴 / 三星等定制机也有同名预装）。
+> 兼容 Android 8.0+（API 26+），targetSdk 34：HyperOS 1/2/3（Android 11–16）与 HyperOS 4 均可运行。在 Xiaomi 17 / HyperOS 4.0.6 / Android 17 上实测可用；其它品牌理论上通用（vivo / OPPO / 一加 / 真我 / 中兴 / 三星等定制机也有同名预装）。
 
 ---
 
@@ -52,7 +52,7 @@ ANDROID_HOME=/path/to/Android/Sdk python build.py
 2. 安装本应用：
 
    ```bash
-   adb install --user 0 -r -t build/SystemHelperFucker.apk
+   adb install --user 0 -r build/SystemHelperFucker.apk
    ```
 
    > MIUI 上普通 `adb install` 可能报 `INSTALL_FAILED_USER_RESTRICTED`，加 `--user 0` 即可。
