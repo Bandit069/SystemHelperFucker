@@ -1,0 +1,16 @@
+# build output
+build/
+*.apk
+*.apk.idsig
+
+# downloaded toolchain
+.sdk/
+libs/
+
+# local signing material
+*.keystore
+*.jks
+
+# OS noise
+.DS_Store
+Thumbs.db
